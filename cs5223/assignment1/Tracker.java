@@ -6,7 +6,9 @@ public class Tracker {
 
 	public static void main(String args[]) {
 		int portNumber = Integer.parseInt(args[0]);
-		TrackerThread thread = new TrackerThread(portNumber);
+		int gridSize = Integer.parseInt(args[1]);
+		int treasureCount = Integer.parseInt(args[2]);
+		TrackerThread thread = new TrackerThread(portNumber, gridSize, treasureCount);
 		thread.start();
 	}
 }

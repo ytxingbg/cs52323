@@ -11,14 +11,18 @@ import java.util.List;
 
 public class TrackerThread extends Thread {
 	private int portNumber;
+	private int gridSize;
+	private int treasureCount;
 	private List<Player> players;
 
 	public TrackerThread() {
 
 	}
 
-	public TrackerThread(int portNumber) {
+	public TrackerThread(int portNumber, int gridSize, int tresureCount) {
 		this.portNumber = portNumber;
+		this.gridSize = gridSize;
+		this.treasureCount = treasureCount;
 		this.players = new ArrayList<Player>();
 	}
 
@@ -37,6 +41,7 @@ public class TrackerThread extends Thread {
 						if (lastPlayer != null) {
 							writer.write(lastPlayer.getIp() + ":" + lastPlayer.getPort());
 						}
+						writer.write(gridSize + ":" + treasureCount);
 						writer.newLine();
 						writer.flush();
 						writer.close();
