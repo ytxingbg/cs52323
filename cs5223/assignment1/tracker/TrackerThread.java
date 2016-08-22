@@ -1,4 +1,4 @@
-package cs5223.assignment1;
+package cs5223.assignment1.tracker;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
