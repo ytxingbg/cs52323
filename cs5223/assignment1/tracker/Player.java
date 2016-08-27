@@ -1,5 +1,8 @@
 package cs5223.assignment1.tracker;
-public class Player{
+
+import java.io.Serializable;
+
+public class Player implements IPlayer, Serializable{
 	private String name;
     private String ip;
     private int port;
