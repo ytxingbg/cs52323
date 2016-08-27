@@ -1,4 +1,4 @@
-package cs5223.assignment1.tracker;
+package cs5223.rmi;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;

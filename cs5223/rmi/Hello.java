@@ -1,4 +1,4 @@
-package cs5223.assignment1.tracker;
+package cs5223.rmi;
 
 /*
  * Copyright 2004 Sun Microsystems, Inc. All  Rights Reserved.
