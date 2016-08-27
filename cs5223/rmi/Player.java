@@ -6,6 +6,7 @@ public class Player implements IPlayer, Serializable{
 	private String name;
     private String ip;
     private int port;
+    private int score;
     public Player(){
 
     }
@@ -13,6 +14,7 @@ public class Player implements IPlayer, Serializable{
     	this.name = name;
         this.ip = ip;
         this.port = port;
+        this.score = 0;
     }
     
     public String getName()
@@ -28,4 +30,8 @@ public class Player implements IPlayer, Serializable{
     public int getPort(){
         return port;
     }
+	@Override
+	public void findTreasure() {
+		this.score++;
+	}
 }

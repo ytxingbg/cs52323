@@ -42,7 +42,7 @@ package cs5223.rmi;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface Hello extends Remote {
+public interface ITracker extends Remote {
     String sayHello() throws RemoteException;
     IPlayer getRandomPlayer(IPlayer callingPlayer) throws RemoteException;
 }

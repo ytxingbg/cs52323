@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Tracker implements Hello {
+public class Tracker implements ITracker {
 	private static int portNumber;
 	private static int gridSize;
 	private static int treasureCount;
@@ -26,16 +26,16 @@ public class Tracker implements Hello {
 	}
 
 	public static void main(String args[]) {
-		Hello stub = null;
+		ITracker stub = null;
 		Registry registry = null;
 		try {
 			int portNumber = Integer.parseInt(args[0]);
 			int gridSize = Integer.parseInt(args[1]);
 			int treasureCount = Integer.parseInt(args[2]);
 			Tracker tracker = new Tracker(portNumber,gridSize,treasureCount);
-			stub = (Hello) UnicastRemoteObject.exportObject(tracker, 0);
+			stub = (ITracker) UnicastRemoteObject.exportObject(tracker, 0);
 			registry = LocateRegistry.getRegistry();
-			registry.rebind("Hello", stub);
+			registry.rebind("ITracker", stub);
 			System.out.println("Tracker ready.");
 		} catch (Exception e) {
 			System.err.println("Tracker exception: ");
