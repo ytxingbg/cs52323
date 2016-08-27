@@ -10,21 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TrackerThread extends Thread {
-	private int portNumber;
-	private int gridSize;
-	private int treasureCount;
-	private List<Player> players;
+	
 
 	public TrackerThread() {
 
 	}
 
-	public TrackerThread(int portNumber, int gridSize, int tresureCount) {
-		this.portNumber = portNumber;
-		this.gridSize = gridSize;
-		this.treasureCount = treasureCount;
-		this.players = new ArrayList<Player>();
-	}
+	
 
 	public void run() {
 		try (ServerSocket serverSocket = new ServerSocket(portNumber);) {
